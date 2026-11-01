@@ -3,7 +3,7 @@
     <?php if ($item['image']): ?>
       <img src="<?= e(media($item['image'])) ?>" alt="<?= e($item['title']) ?>" loading="lazy" width="640" height="420">
     <?php else: ?>
-      <div class="work-placeholder" style="--h: <?= (crc32($item['title']) % 360) ?>" aria-hidden="true"><span><?= e(mb_substr($item['title'], 0, 1)) ?></span></div>
+      <div class="work-placeholder" style="--h: <?= (205 + crc32($item['title']) % 30) ?>" aria-hidden="true"><span><?= e(mb_substr($item['title'], 0, 1)) ?></span></div>
     <?php endif; ?>
     <?php if ($item['category']): ?><span class="work-tag"><?= e($item['category']) ?></span><?php endif; ?>
   </div>

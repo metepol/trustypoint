@@ -28,7 +28,7 @@ $marquee = array_filter(array_map('trim', explode('·', (string)setting('home_ma
 <span class="k">&gt;</span> Bir içecek markası için
   kapakları toplayan, 30 sn'lik
   skor tablolu bir mobil oyun yap.
-  Renkler: <span class="s">#c6ff3d</span> <span class="s">#7c5cff</span>
+  Renkler: <span class="s">#13306f</span> <span class="s">#2554c7</span>
 
 <span class="k">✓</span> game.js oluşturuldu
 <span class="k">✓</span> leaderboard.php eklendi
