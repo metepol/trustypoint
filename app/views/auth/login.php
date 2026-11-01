@@ -7,7 +7,7 @@
       <input type="hidden" name="next" value="<?= e($next) ?>">
       <div class="field"><label for="l-email">E-posta</label><input id="l-email" type="email" name="email" required autofocus autocomplete="email" value="<?= e(old('email')) ?>"></div>
       <div class="field"><label for="l-pass">Şifre <a href="<?= e(url('sifremi-unuttum')) ?>" class="field-link">Unuttum</a></label>
-        <div class="pass-wrap"><input id="l-pass" type="password" name="password" required autocomplete="current-password"><button type="button" class="pass-toggle" data-toggle-pass aria-label="Şifreyi göster">👁</button></div></div>
+        <div class="pass-wrap"><input id="l-pass" type="password" name="password" required autocomplete="current-password"><button type="button" class="pass-toggle" data-toggle-pass aria-label="Şifreyi göster"><?= icon('eye', 18) ?></button></div></div>
       <button class="btn btn-primary btn-lg btn-block">Giriş yap</button>
     </form>
     <div class="divider"><span>veya şifresiz</span></div>

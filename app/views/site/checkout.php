@@ -18,14 +18,14 @@ $terms = '<a href="' . e(url('sayfa/mesafeli-satis-sozlesmesi')) . '" target="_b
         <?php if ($stripe): ?>
         <form method="post" action="<?= e(url('odeme/stripe')) ?>" class="pay-option glass-card">
           <?= csrf_field() ?>
-          <div class="pay-head"><span class="pay-icon">💳</span><div><h2 class="h3">Kredi / Banka Kartı</h2><p class="muted tiny">Stripe güvenli ödeme · Anında erişim</p></div></div>
+          <div class="pay-head"><span class="pay-icon"><?= icon('card', 24) ?></span><div><h2 class="h3">Kredi / Banka Kartı</h2><p class="muted tiny">Stripe güvenli ödeme · Anında erişim</p></div></div>
           <label class="check"><input type="checkbox" name="terms" required> <span><?= $terms ?></span></label>
           <button class="btn btn-primary btn-lg btn-block">Kartla öde · <?= e(money(Payments::price())) ?></button>
         </form>
         <?php endif; ?>
         <?php if ($havale): ?>
         <div class="pay-option glass-card">
-          <div class="pay-head"><span class="pay-icon">🏦</span><div><h2 class="h3">Havale / EFT</h2><p class="muted tiny">Banka hesabımıza gönder · Onay sonrası erişim</p></div></div>
+          <div class="pay-head"><span class="pay-icon"><?= icon('bank', 24) ?></span><div><h2 class="h3">Havale / EFT</h2><p class="muted tiny">Banka hesabımıza gönder · Onay sonrası erişim</p></div></div>
           <p class="muted">IBAN bilgilerini ve sipariş numaranı bir sonraki adımda göreceksin.</p>
           <a href="<?= e(url('odeme/havale')) ?>" class="btn btn-outline btn-lg btn-block">Havale ile öde →</a>
         </div>

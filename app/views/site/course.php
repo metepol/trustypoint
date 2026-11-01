@@ -6,14 +6,14 @@ $preview = Embed::render((string)setting('course_preview', ''), 'Eğitim tanıt�
 <section class="page-hero course-hero">
   <div class="container">
     <nav class="crumbs" aria-label="Sayfa yolu"><a href="<?= e(url('/')) ?>">Ana Sayfa</a><span>/</span><span aria-current="page">Eğitim</span></nav>
-    <span class="kicker"><span class="dot-live"></span> <?= e(setting('course_duration')) ?></span>
+    <span class="badge-pill"><span class="dot-live"></span> <?= e(setting('course_duration')) ?></span>
     <h1 class="display"><?= e(setting('course_title')) ?></h1>
     <p class="lead"><?= e(setting('course_subtitle')) ?></p>
     <div class="chips">
-      <span class="chip">🎚 <?= e(setting('course_level')) ?></span>
-      <span class="chip">🔴 Canlı yayın</span>
-      <span class="chip">🔁 <?= App\Access::replayDays() ?> gün tekrar</span>
-      <span class="chip">🇹🇷 Türkçe</span>
+      <span class="chip"><?= icon('level', 16) ?> <?= e(setting('course_level')) ?></span>
+      <span class="chip"><?= icon('live', 16) ?> Canlı yayın</span>
+      <span class="chip"><?= icon('repeat', 16) ?> <?= App\Access::replayDays() ?> gün tekrar</span>
+      <span class="chip"><?= icon('globe', 16) ?> Türkçe</span>
     </div>
   </div>
 </section>

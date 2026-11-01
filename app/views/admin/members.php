@@ -1,5 +1,5 @@
 <div class="adm-head">
-  <h1 class="adm-title">👥 Üyeler</h1>
+  <h1 class="adm-title">Üyeler</h1>
   <a href="<?= e(url('yonetim/uyeler/disa-aktar')) ?>" class="btn btn-ghost btn-sm">CSV indir</a>
 </div>
 <form class="filters" method="get">

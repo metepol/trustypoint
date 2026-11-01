@@ -1,4 +1,4 @@
-<div class="adm-head"><h1 class="adm-title">📩 Mesajlar</h1></div>
+<div class="adm-head"><h1 class="adm-title">Mesajlar</h1></div>
 <div class="card table-wrap">
   <table class="table">
     <thead><tr><th>Gönderen</th><th>Konu</th><th>Mesaj</th><th>Tarih</th></tr></thead>

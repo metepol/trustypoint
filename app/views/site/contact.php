@@ -3,11 +3,11 @@
 <section class="section pt-0">
   <div class="container contact-grid">
     <div class="contact-info">
-      <?php if ($m = setting('contact_email')): ?><a class="info-tile" href="mailto:<?= e($m) ?>"><span>E-posta</span><b><?= e($m) ?></b></a><?php endif; ?>
-      <?php if ($p = setting('contact_phone')): ?><a class="info-tile" href="tel:<?= e(preg_replace('/[^0-9+]/', '', (string)$p)) ?>"><span>Telefon</span><b><?= e($p) ?></b></a><?php endif; ?>
-      <?php if ($w = preg_replace('/\D/', '', (string)setting('contact_whatsapp'))): ?><a class="info-tile" href="https://wa.me/<?= e($w) ?>" target="_blank" rel="noopener"><span>WhatsApp</span><b>Hemen yaz →</b></a><?php endif; ?>
-      <?php if ($a = setting('contact_address')): ?><div class="info-tile"><span>Adres</span><b><?= nl2br(e($a)) ?></b></div><?php endif; ?>
-      <?php if ($h = setting('contact_hours')): ?><div class="info-tile"><span>Çalışma saatleri</span><b><?= e($h) ?></b></div><?php endif; ?>
+      <?php if ($m = setting('contact_email')): ?><a class="info-tile" href="mailto:<?= e($m) ?>"><span><?= icon('mail', 14) ?> E-posta</span><b><?= e($m) ?></b></a><?php endif; ?>
+      <?php if ($p = setting('contact_phone')): ?><a class="info-tile" href="tel:<?= e(preg_replace('/[^0-9+]/', '', (string)$p)) ?>"><span><?= icon('phone', 14) ?> Telefon</span><b><?= e($p) ?></b></a><?php endif; ?>
+      <?php if ($w = preg_replace('/\D/', '', (string)setting('contact_whatsapp'))): ?><a class="info-tile" href="https://wa.me/<?= e($w) ?>" target="_blank" rel="noopener"><span><?= icon('chat', 14) ?> WhatsApp</span><b>Hemen yaz →</b></a><?php endif; ?>
+      <?php if ($a = setting('contact_address')): ?><div class="info-tile"><span><?= icon('map', 14) ?> Adres</span><b><?= nl2br(e($a)) ?></b></div><?php endif; ?>
+      <?php if ($h = setting('contact_hours')): ?><div class="info-tile"><span><?= icon('clock', 14) ?> Çalışma saatleri</span><b><?= e($h) ?></b></div><?php endif; ?>
     </div>
     <form method="post" action="<?= e(url('iletisim')) ?>" class="form glass-card" novalidate>
       <?= csrf_field() ?>

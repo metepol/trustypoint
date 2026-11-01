@@ -25,7 +25,7 @@ $resources = array_map(static fn($l) => array_map('trim', array_pad(explode('|',
         <p class="tiny muted mt-1">Bu tekrar <b><?= e(tr_date(date('Y-m-d H:i:s', Access::replayUntilTs($lesson)), false)) ?></b> tarihine kadar izlenebilir.</p>
         <?php break;
     case Access::PROCESSING: ?>
-        <div class="stage-empty"><h2 class="h3">Tekrar hazırlanıyor 🎞</h2><p class="muted">Yayın sona erdi. Kayıt kısa süre içinde buraya eklenecek ve <?= Access::replayDays() ?> gün boyunca izlenebilecek.</p></div>
+        <div class="stage-empty"><h2 class="h3">Tekrar hazırlanıyor</h2><p class="muted">Yayın sona erdi. Kayıt kısa süre içinde buraya eklenecek ve <?= Access::replayDays() ?> gün boyunca izlenebilecek.</p></div>
         <?php break;
     case Access::EXPIRED: ?>
         <div class="stage-empty"><h2 class="h3">Tekrar süresi doldu</h2><p class="muted">Bu dersin tekrar izleme süresi (<?= Access::replayDays() ?> gün) sona erdi.</p></div>
@@ -46,7 +46,7 @@ $resources = array_map(static fn($l) => array_map('trim', array_pad(explode('|',
   <h2 class="h3 mt-3">Ders kaynakları</h2>
   <ul class="resources">
     <?php foreach ($resources as [$title, $link]): ?>
-      <li><?php if (preg_match('#^https?://#', $link)): ?><a href="<?= e($link) ?>" target="_blank" rel="noopener">📎 <?= e($title) ?> ↗</a><?php else: ?>📎 <?= e($title) ?><?php endif; ?></li>
+      <li><?php if (preg_match('#^https?://#', $link)): ?><a href="<?= e($link) ?>" target="_blank" rel="noopener"><?= icon('link', 16) ?> <?= e($title) ?> <?= icon('external', 14) ?></a><?php else: ?><?= icon('file', 16) ?> <?= e($title) ?><?php endif; ?></li>
     <?php endforeach; ?>
   </ul>
 <?php endif; ?>

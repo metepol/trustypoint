@@ -1,5 +1,5 @@
 <?php $t = $tabs[$tab]; ?>
-<div class="adm-head"><h1 class="adm-title"><?= $t['icon'] ?> <?= e($t['title']) ?> ayarları</h1></div>
+<div class="adm-head"><h1 class="adm-title"><?= e($t['title']) ?> ayarları</h1></div>
 <nav class="tabs">
   <?php foreach ($tabs as $k => $x): ?><a href="<?= e(url('yonetim/ayarlar/' . $k)) ?>" class="<?= $k === $tab ? 'is-active' : '' ?>"><?= e($x['title']) ?></a><?php endforeach; ?>
 </nav>

@@ -1,6 +1,6 @@
 <?php use App\Access; ?>
 <div class="adm-head">
-  <h1 class="adm-title"><?= $r['icon'] ?> <?= e($r['title']) ?></h1>
+  <h1 class="adm-title"><?= e($r['title']) ?></h1>
   <a href="<?= e(url('yonetim/' . $r['key'] . '/yeni')) ?>" class="btn btn-primary btn-sm">+ <?= e($r['singular']) ?> ekle</a>
 </div>
 <?php if (!empty($r['intro'])): ?><p class="muted"><?= e($r['intro']) ?></p><?php endif; ?>

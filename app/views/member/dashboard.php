@@ -3,7 +3,7 @@ use App\Access;
 use App\View;
 ?>
 <header class="member-head">
-  <h1 class="h2">Merhaba <?= e(explode(' ', $user['name'])[0]) ?> <span aria-hidden="true">👋</span></h1>
+  <h1 class="h2">Merhaba <?= e(explode(' ', $user['name'])[0]) ?></h1>
   <p class="muted"><?= $hasCourse ? 'Canlı yayınlar yayın gününde burada açılır; tekrarlar ' . Access::replayDays() . ' gün boyunca erişimde.' : 'Eğitime kaydolduğunda canlı yayınlar ve tekrarlar burada açılacak.' ?></p>
 </header>
 
@@ -38,7 +38,7 @@ use App\View;
           <?php if ($state === Access::REPLAY): ?> · Tekrar <?= e(tr_date(date('Y-m-d H:i:s', Access::replayUntilTs($l)), false)) ?> tarihine kadar<?php endif; ?>
         </small>
       </div>
-      <span class="pill pill-<?= e($state) ?>"><?= $hasCourse ? e(Access::label($state)) : '🔒 Kilitli' ?></span>
+      <span class="pill pill-<?= e($state) ?>"><?= $hasCourse ? e(Access::label($state)) : icon('lock', 12) . ' Kilitli' ?></span>
     </<?= $clickable ? 'a' : 'div' ?>>
   <?php endforeach; ?>
   <?php if (!$lessons): ?><p class="muted">Ders takvimi yakında yayınlanacak.</p><?php endif; ?>

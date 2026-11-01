@@ -1,5 +1,5 @@
 <?php $labels = ['pending' => 'Bekliyor', 'paid' => 'Ödendi', 'cancelled' => 'İptal']; ?>
-<div class="adm-head"><h1 class="adm-title">💰 Siparişler</h1></div>
+<div class="adm-head"><h1 class="adm-title">Siparişler</h1></div>
 <nav class="tabs">
   <?php foreach (['' => 'Tümü', 'pending' => 'Bekleyen', 'paid' => 'Ödenen', 'cancelled' => 'İptal'] as $k => $l): ?>
     <a href="<?= e(url('yonetim/siparisler' . ($k ? '?durum=' . $k : ''))) ?>" class="<?= $status === $k ? 'is-active' : '' ?>"><?= e($l) ?></a>
@@ -13,7 +13,7 @@
       <tr class="<?= $needs ? 'row-hl' : '' ?>">
         <td>#<?= (int)$o['id'] ?></td>
         <td><a href="<?= e(url('yonetim/uyeler/' . $o['user_id'])) ?>"><?= e($o['name']) ?></a><br><small class="muted"><?= e($o['email']) ?></small></td>
-        <td><?= $o['method'] === 'stripe' ? '💳 Stripe' : '🏦 Havale' ?>
+        <td><?= $o['method'] === 'stripe' ? 'Stripe (kart)' : 'Havale / EFT' ?>
           <?php if ($o['havale_sender']): ?><br><small>Gönderen: <b><?= e($o['havale_sender']) ?></b></small><?php endif; ?>
           <?php if ($o['havale_note']): ?><br><small class="muted"><?= e($o['havale_note']) ?></small><?php endif; ?>
           <?php if ($o['method'] === 'havale' && !$o['havale_sender'] && $o['status'] === 'pending'): ?><br><small class="muted">Bildirim yapılmadı</small><?php endif; ?>

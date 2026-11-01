@@ -63,7 +63,7 @@ final class AdminController
     {
         return [
             'dersler' => [
-                'table' => 'lessons', 'title' => 'Canlı Dersler', 'singular' => 'Ders', 'icon' => '🎬',
+                'table' => 'lessons', 'title' => 'Canlı Dersler', 'singular' => 'Ders', 'icon' => 'film',
                 'order' => 'scheduled_at ASC, sort ASC',
                 'list'  => ['title' => 'Başlık', 'scheduled_at' => 'Yayın tarihi', 'is_published' => 'Yayında', '_state' => 'Durum'],
                 'intro' => 'Her ders yayın tarihinde üyelere canlı olarak açılır; bittikten sonra tekrar kaydı yayın tarihinden itibaren ' . Access::replayDays() . ' gün izlenebilir.',
@@ -81,7 +81,7 @@ final class AdminController
                 ],
             ],
             'ornekler' => [
-                'table' => 'examples', 'title' => 'Örnek Projeler', 'singular' => 'Örnek', 'icon' => '🕹️',
+                'table' => 'examples', 'title' => 'Örnek Projeler', 'singular' => 'Örnek', 'icon' => 'gamepad',
                 'order' => 'sort ASC, id ASC',
                 'list'  => ['image' => 'Görsel', 'title' => 'Başlık', 'category' => 'Etiket', 'sort' => 'Sıra'],
                 'fields' => [
@@ -95,7 +95,7 @@ final class AdminController
                 ],
             ],
             'referanslar' => [
-                'table' => 'testimonials', 'title' => 'Referanslar', 'singular' => 'Referans', 'icon' => '⭐',
+                'table' => 'testimonials', 'title' => 'Referanslar', 'singular' => 'Referans', 'icon' => 'star',
                 'order' => 'sort ASC, id ASC',
                 'list'  => ['logo' => 'Logo', 'name' => 'Ad', 'company' => 'Kurum', 'sort' => 'Sıra'],
                 'fields' => [
@@ -109,7 +109,7 @@ final class AdminController
                 ],
             ],
             'sss' => [
-                'table' => 'faqs', 'title' => 'Sık Sorulan Sorular', 'singular' => 'Soru', 'icon' => '❓',
+                'table' => 'faqs', 'title' => 'Sık Sorulan Sorular', 'singular' => 'Soru', 'icon' => 'help',
                 'order' => 'sort ASC, id ASC',
                 'list'  => ['question' => 'Soru', 'sort' => 'Sıra'],
                 'fields' => [
@@ -119,7 +119,7 @@ final class AdminController
                 ],
             ],
             'sayfalar' => [
-                'table' => 'pages', 'title' => 'Sayfalar', 'singular' => 'Sayfa', 'icon' => '📄',
+                'table' => 'pages', 'title' => 'Sayfalar', 'singular' => 'Sayfa', 'icon' => 'file',
                 'order' => 'id ASC',
                 'list'  => ['title' => 'Başlık', 'slug' => 'Adres', 'show_footer' => 'Footer'],
                 'intro' => '“hakkimizda” adresli sayfa Hakkımızda menüsünde gösterilir. Diğer sayfalar /sayfa/adres şeklinde yayınlanır (KVKK, sözleşmeler vb.).',
@@ -408,7 +408,7 @@ final class AdminController
     public static function settingTabs(): array
     {
         return [
-            'genel' => ['title' => 'Genel', 'icon' => '⚙️', 'fields' => [
+            'genel' => ['title' => 'Genel', 'icon' => 'settings', 'fields' => [
                 'site_name'        => ['Site adı', 'text'],
                 'site_tagline'     => ['Slogan', 'text'],
                 'site_logo'        => ['Logo (boşsa site adı yazılır)', 'image'],
@@ -429,7 +429,7 @@ final class AdminController
                 'social_x'         => ['X (Twitter) URL', 'text'],
                 'social_tiktok'    => ['TikTok URL', 'text'],
             ]],
-            'egitim' => ['title' => 'Eğitim & Fiyat', 'icon' => '🎓', 'fields' => [
+            'egitim' => ['title' => 'Eğitim & Fiyat', 'icon' => 'cap', 'fields' => [
                 'course_title'       => ['Eğitim adı', 'text'],
                 'course_subtitle'    => ['Alt başlık', 'textarea'],
                 'course_description' => ['Detaylı açıklama (HTML)', 'html'],
@@ -448,14 +448,14 @@ final class AdminController
                 'replay_days'        => ['Tekrar izleme süresi (gün, yayın tarihinden itibaren)', 'number'],
                 'live_open_minutes'  => ['Canlı yayın ekranı kaç dk önce açılsın?', 'number'],
             ]],
-            'anasayfa' => ['title' => 'Ana Sayfa', 'icon' => '🏠', 'fields' => [
+            'anasayfa' => ['title' => 'Ana Sayfa', 'icon' => 'home', 'fields' => [
                 'home_hero_kicker' => ['Hero üst etiketi', 'text'],
                 'home_hero_title'  => ['Hero başlığı (*kelime* vurgulanır)', 'text'],
                 'home_hero_text'   => ['Hero açıklaması', 'textarea'],
                 'home_stats'       => ['İstatistikler (her satır: değer|etiket)', 'textarea'],
                 'home_marquee'     => ['Kayan teknoloji şeridi ( · ile ayırın)', 'textarea'],
             ]],
-            'smtp' => ['title' => 'SMTP / E-posta', 'icon' => '✉️', 'test' => 'smtp', 'fields' => [
+            'smtp' => ['title' => 'SMTP / E-posta', 'icon' => 'mail', 'test' => 'smtp', 'fields' => [
                 'smtp_host'          => ['SMTP sunucusu (ör. smtp.yandex.com.tr)', 'text'],
                 'smtp_port'          => ['Port', 'number'],
                 'smtp_secure'        => ['Güvenlik', 'select', ['tls' => 'STARTTLS (587)', 'ssl' => 'SSL (465)', 'none' => 'Yok (25)']],
@@ -467,7 +467,7 @@ final class AdminController
                 'admin_notify_email' => ['Bildirim e-postası', 'text'],
                 'mail_admin_notify'  => ['Havale, ödeme ve iletişim mesajlarında yöneticiye e-posta gönder', 'checkbox'],
             ]],
-            'odeme' => ['title' => 'Ödeme', 'icon' => '💳', 'fields' => [
+            'odeme' => ['title' => 'Ödeme', 'icon' => 'card', 'fields' => [
                 '_h1'                   => ['Stripe (kredi / banka kartı)', 'heading'],
                 'pay_stripe_enabled'    => ['Stripe ile ödemeyi aç', 'checkbox'],
                 'stripe_public_key'     => ['Publishable key (pk_...)', 'text'],
@@ -480,7 +480,7 @@ final class AdminController
                 'havale_iban'           => ['IBAN', 'text'],
                 'havale_info'           => ['Ek açıklama', 'textarea'],
             ]],
-            'telegram' => ['title' => 'Telegram', 'icon' => '📣', 'test' => 'telegram', 'fields' => [
+            'telegram' => ['title' => 'Telegram', 'icon' => 'send', 'test' => 'telegram', 'fields' => [
                 'tg_enabled'     => ['Telegram uyarılarını aç', 'checkbox'],
                 'tg_bot_token'   => ['Bot token (@BotFather)', 'password'],
                 'tg_chat_id'     => ['Chat ID (birden fazla için virgülle ayırın)', 'text', null, 'Bota /start yazın, ardından https://api.telegram.org/bot<TOKEN>/getUpdates adresinden chat.id değerini alın. Grup için botu gruba ekleyin (ID “-” ile başlar).'],
@@ -491,7 +491,7 @@ final class AdminController
                 'tg_on_payment'  => ['Ödeme onaylandı', 'checkbox'],
                 'tg_on_contact'  => ['İletişim formu mesajı', 'checkbox'],
             ]],
-            'seo' => ['title' => 'SEO', 'icon' => '🔎', 'fields' => [
+            'seo' => ['title' => 'SEO', 'icon' => 'search', 'fields' => [
                 'seo_index'         => ['Arama motorlarının siteyi indekslemesine izin ver', 'checkbox'],
                 'seo_site_title'    => ['Site başlığı (title sonu)', 'text'],
                 'seo_separator'     => ['Başlık ayırıcı', 'text'],
