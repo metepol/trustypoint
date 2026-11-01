@@ -33,8 +33,9 @@ body.admin { background: #0c0c12; }
 .sdot { width: 10px; height: 10px; border-radius: 50%; background: var(--line-2); }
 .sdot.on { background: var(--green); box-shadow: 0 0 10px var(--green); }
 .table.compact td { padding: 10px 8px; }
-.actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
-.actions form { margin: 0; }
+.actions { text-align: right; white-space: nowrap; }
+.actions > * { display: inline-block; vertical-align: middle; margin: 2px 0 2px 4px; }
+.actions form { margin-top: 2px; margin-bottom: 2px; }
 .thumb { width: 56px; height: 40px; object-fit: cover; border-radius: 8px; background: #fff; }
 .thumb-lg { max-width: 220px; max-height: 140px; object-fit: contain; border-radius: 10px; background: #1f1f2c; padding: 6px; }
 .img-field { display: grid; gap: 8px; }
