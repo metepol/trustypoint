@@ -22,7 +22,7 @@ $current = App\Router::currentPath();
     <meta name="robots" content="noindex, nofollow">
     <title>Yönetim · <?= e(setting('site_name')) ?></title>
     <link rel="icon" href="<?= e(asset('assets/img/favicon.svg')) ?>">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="<?= e(asset('assets/css/style.css')) ?>">
     <link rel="stylesheet" href="<?= e(asset('assets/css/admin.css')) ?>">
 </head>

@@ -14,7 +14,7 @@ $pixel = trim((string)setting('seo_meta_pixel', ''));
     <link rel="icon" href="<?= $favicon ? e(media($favicon)) : e(asset('assets/img/favicon.svg')) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="<?= e(asset('assets/css/style.css')) ?>">
     <link rel="sitemap" type="application/xml" href="<?= e(url('sitemap.xml')) ?>">
 <?php if ($gtm !== '' && preg_match('/^GTM-[A-Z0-9]+$/', $gtm)): ?>
