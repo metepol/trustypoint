@@ -5,11 +5,11 @@ body.admin { background: #f4f7fc; }
 .adm-side .logo { padding: 0 8px; color: #fff; }
 .adm-side .logo-mark { background: #fff; color: var(--navy-800); }
 .adm-nav { display: grid; gap: 2px; }
-.adm-nav a { display: flex; align-items: center; gap: 10px; padding: .62em .8em; border-radius: 10px; color: rgba(255, 255, 255, .82); font-size: .92rem; text-decoration: none !important; }
+.adm-nav a { display: flex; align-items: center; gap: 10px; padding: .62em .8em; border-radius: 4px; color: rgba(255, 255, 255, .82); font-size: .92rem; text-decoration: none !important; }
 .adm-nav a span { width: 22px; display: grid; place-items: center; }
 .adm-nav a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
 .adm-nav a.is-active { background: #fff; color: var(--navy-800); font-weight: 700; box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .4); }
-.adm-nav .badge { margin-left: auto; background: var(--red); color: #fff; font: 700 .7rem/1 var(--font); padding: .35em .55em; border-radius: 999px; font-style: normal; }
+.adm-nav .badge { margin-left: auto; background: var(--red); color: #fff; font: 700 .7rem/1 var(--font); padding: .35em .55em; border-radius: 4px; font-style: normal; }
 .adm-sep { font: 600 .7rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: rgba(255, 255, 255, .55); padding: 14px 10px 6px; }
 .adm-foot { margin-top: auto; display: grid; gap: 4px; font-size: .88rem; padding: 0 8px; }
 .adm-foot a, .adm-foot button { color: rgba(255, 255, 255, .7); background: none; border: 0; text-align: left; padding: 6px 0; cursor: pointer; font: inherit; }
@@ -20,11 +20,11 @@ body.admin { background: #f4f7fc; }
 .adm-content { padding: clamp(18px, 3vw, 32px); display: grid; gap: 20px; align-content: start; max-width: 1280px; }
 .adm-title { font: 400 1.7rem var(--display); margin: 0; letter-spacing: -.02em; color: var(--navy-800); }
 .adm-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(16px, 2.5vw, 24px); box-shadow: var(--shadow-sm); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: clamp(16px, 2.5vw, 24px); box-shadow: var(--shadow-sm); }
 .card-title { font-size: 1.05rem; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .card-title a { font-size: .85rem; font-weight: 500; }
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-.kpi { display: block; padding: 20px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); color: var(--text); text-decoration: none !important; box-shadow: var(--shadow-sm); }
+.kpi { display: block; padding: 20px; border-radius: 4px; background: var(--surface); border: 1px solid var(--line); color: var(--text); text-decoration: none !important; box-shadow: var(--shadow-sm); }
 .kpi:first-child { background: var(--grad); color: #fff; border-color: transparent; }
 .kpi:first-child span { color: var(--on-navy-muted); }
 .kpi:first-child b { background: none; -webkit-text-fill-color: #fff; color: #fff; }
@@ -41,14 +41,14 @@ body.admin { background: #f4f7fc; }
 .actions { text-align: right; white-space: nowrap; }
 .actions > * { display: inline-block; vertical-align: middle; margin: 2px 0 2px 4px; }
 .actions form { margin-top: 2px; margin-bottom: 2px; }
-.thumb { width: 56px; height: 40px; object-fit: cover; border-radius: 8px; background: var(--surface-2); }
-.thumb-lg { max-width: 220px; max-height: 140px; object-fit: contain; border-radius: 10px; background: var(--surface-2); padding: 6px; border: 1px solid var(--line); }
+.thumb { width: 56px; height: 40px; object-fit: cover; border-radius: 4px; background: var(--surface-2); }
+.thumb-lg { max-width: 220px; max-height: 140px; object-fit: contain; border-radius: 4px; background: var(--surface-2); padding: 6px; border: 1px solid var(--line); }
 .img-field { display: grid; gap: 8px; }
 .form-h { font-size: .8rem; font-family: var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--navy-500); border-top: 1px solid var(--line); padding-top: 18px; margin: 8px 0 0; }
 .help { font-size: .8rem; color: var(--muted); margin: 0; }
 .form-actions { position: sticky; bottom: 0; padding: 14px 0 0; background: linear-gradient(transparent, var(--surface) 40%); }
 .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
-.tabs a { padding: .55em 1em; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); color: var(--text-2); font-size: .88rem; text-decoration: none !important; }
+.tabs a { padding: .55em 1em; border-radius: 4px; border: 1px solid var(--line-2); background: var(--surface); color: var(--text-2); font-size: .88rem; text-decoration: none !important; }
 .tabs a.is-active { background: var(--grad); color: #fff; border-color: transparent; font-weight: 600; }
 .filters { display: flex; gap: 10px; flex-wrap: wrap; }
 .filters input { flex: 1; min-width: 220px; }
@@ -59,11 +59,11 @@ body.admin { background: #f4f7fc; }
 .dl dd { margin: 0; }
 .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn-row form { margin: 0; }
-.msg-body { margin-top: 18px; padding: 18px; background: var(--surface-2); border-radius: 12px; border: 1px solid var(--line); }
+.msg-body { margin-top: 18px; padding: 18px; background: var(--surface-2); border-radius: 4px; border: 1px solid var(--line); }
 .note-pop { position: relative; }
 .note-pop summary { list-style: none; }
 .note-pop summary::-webkit-details-marker { display: none; }
-.note-pop form { position: absolute; right: 0; top: 110%; z-index: 5; width: 260px; display: grid; gap: 8px; padding: 12px; background: var(--surface); border: 1px solid var(--line-2); border-radius: 12px; box-shadow: var(--shadow); white-space: normal; }
+.note-pop form { position: absolute; right: 0; top: 110%; z-index: 5; width: 260px; display: grid; gap: 8px; padding: 12px; background: var(--surface); border: 1px solid var(--line-2); border-radius: 4px; box-shadow: var(--shadow); white-space: normal; }
 .switch { padding: 6px 0; }
 .adm .toasts { top: 76px; }
 @media (max-width: 960px) {
