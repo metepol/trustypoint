@@ -81,6 +81,25 @@
     });
   });
 
+  // Hero tanıtım videosu
+  $$('[data-hv-open]').forEach((btn) => btn.addEventListener('click', () => {
+    const box = btn.closest('.hero-video');
+    const f = document.createElement('iframe');
+    f.src = box.dataset.hvEmbed;
+    f.title = 'Tanıtım videosu';
+    f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+    f.allowFullscreen = true;
+    box.appendChild(f);
+    box.classList.add('is-playing');
+  }));
+  $$('[data-hv-sound]').forEach((btn) => btn.addEventListener('click', () => {
+    const box = btn.closest('.hero-video');
+    const v = box.querySelector('video');
+    v.muted = false; v.loop = false; v.controls = true; v.currentTime = 0;
+    v.play().catch(() => {});
+    box.classList.add('is-playing');
+  }));
+
   // Onay isteyen formlar
   $$('form[data-confirm]').forEach((f) => f.addEventListener('submit', (e) => { if (!confirm(f.dataset.confirm)) e.preventDefault(); }));
 

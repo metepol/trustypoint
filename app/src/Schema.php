@@ -175,6 +175,9 @@ final class Schema
             // Ana sayfa
             'home_hero_kicker'   => 'Canlı eğitim · Yeni dönem',
             'home_hero_title'    => 'Kod yazma. *Vibe* yaz.',
+            'home_hero_video'    => '',
+            'home_hero_poster'   => '',
+            'home_hero_video_label' => 'Eğitimi 2 dakikada tanı',
             'home_hero_text'     => 'Yapay zekâyla birlikte kodlayarak markalar için oyun ve animasyon üret, yayınla, sat. Tek eğitim, net bir yol haritası.',
             'home_stats'         => "16|Canlı ders\n365|Gün tekrar erişimi\n12+|Yayınlanmış proje\n%100|Uygulamalı",
             'home_marquee'       => 'Phaser · Three.js · GSAP · Lottie · Rive · WebGL · Unity Web · Prompt Engineering · App Store · Google Play',

@@ -4,6 +4,9 @@ use App\Access;
 $heroTitle = preg_replace('/\*(.+?)\*/u', '<em>$1</em>', e(setting('home_hero_title')));
 $stats = array_map(static fn($l) => array_pad(explode('|', $l, 2), 2, ''), lines((string)setting('home_stats')));
 $marquee = array_filter(array_map('trim', explode('·', (string)setting('home_marquee'))));
+$heroVideo = trim((string)(setting('home_hero_video', '') ?: setting('course_preview', '')));
+$heroPoster = media((string)setting('home_hero_poster', ''));
+$heroPlayer = App\Embed::hero($heroVideo, $heroPoster, (string)setting('home_hero_video_label', 'Eğitimi 2 dakikada tanı'));
 $outcomeIcons = ['sparkles', 'gamepad', 'layers', 'trophy', 'rocket', 'award', 'code', 'globe'];
 ?>
 <section class="hero">
@@ -26,6 +29,15 @@ $outcomeIcons = ['sparkles', 'gamepad', 'layers', 'trophy', 'rocket', 'award', '
     </div>
 
     <div class="hero-visual">
+      <?php if ($heroPlayer): ?>
+      <div class="hv-frame">
+        <div class="lm-head">
+          <span class="lm-live"><?= icon('play', 12) ?> TANITIM</span>
+          <span class="lm-title"><?= e(setting('course_title')) ?></span>
+        </div>
+        <?= $heroPlayer ?>
+      </div>
+      <?php else: ?>
       <div class="live-mock" aria-hidden="true">
         <div class="lm-head">
           <span class="lm-live"><span class="dot-live"></span> CANLI</span>
@@ -51,6 +63,7 @@ $outcomeIcons = ['sparkles', 'gamepad', 'layers', 'trophy', 'rocket', 'award', '
           </div>
         </div>
       </div>
+      <?php endif; ?>
       <div class="float-chip fc-1"><?= icon('repeat', 16) ?> <span><b><?= Access::replayDays() ?> gün</b> tekrar erişimi</span></div>
       <div class="float-chip fc-2"><?= icon('award', 16) ?> <span><b>Sertifika</b> program sonunda</span></div>
       <?php View::partial('countdown', ['next' => $next]); ?>
