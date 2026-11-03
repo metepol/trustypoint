@@ -1,0 +1,8 @@
+# Yüklenen dosyalarda betik çalıştırılmasını engelle
+Options -Indexes
+<FilesMatch "\.(php\d?|phtml|phar|pl|py|cgi|sh|htaccess)$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>

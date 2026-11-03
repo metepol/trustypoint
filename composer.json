@@ -1,0 +1,14 @@
+{
+    "name": "metepol/trustypoint",
+    "description": "Vibe coding ile kurumsal oyun & animasyon canlı eğitim satış platformu",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.5",
+        "ext-pdo": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-mbstring": "*",
+        "ext-fileinfo": "*"
+    }
+}
